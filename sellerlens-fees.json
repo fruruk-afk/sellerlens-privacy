@@ -1,0 +1,69 @@
+{
+  "schema": 1,
+  "updated": "2026-08-25",
+  "source": "https://www.etsy.com/legal/fees",
+  "notes": "Etsy fee rates by country. The listing fee is USD 0.20 per listing (billed in the shop's currency at conversion); values below are shown in each country's own currency. Offsite Ads is 15% for shops under the mandatory threshold and 12% once over it. ALWAYS confirm against your own Etsy Payments statements — this table is a best-effort reference, not legal/financial advice.",
+  "default_country": "US",
+  "countries": {
+    "US": {
+      "label": "United States",
+      "currency": "USD",
+      "currencySymbol": "$",
+      "listingFee": 0.20,
+      "transactionPct": 6.5,
+      "paymentPct": 3.0,
+      "paymentFlat": 0.25,
+      "offsiteAdsPct": 15.0
+    },
+    "ID": {
+      "label": "Indonesia",
+      "currency": "IDR",
+      "currencySymbol": "Rp",
+      "listingFee": 3200,
+      "transactionPct": 6.5,
+      "paymentPct": 4.0,
+      "paymentFlat": 4500,
+      "offsiteAdsPct": 15.0
+    },
+    "GB": {
+      "label": "United Kingdom",
+      "currency": "GBP",
+      "currencySymbol": "£",
+      "listingFee": 0.16,
+      "transactionPct": 6.5,
+      "paymentPct": 4.0,
+      "paymentFlat": 0.20,
+      "offsiteAdsPct": 15.0
+    },
+    "DE": {
+      "label": "Germany (Euro)",
+      "currency": "EUR",
+      "currencySymbol": "€",
+      "listingFee": 0.18,
+      "transactionPct": 6.5,
+      "paymentPct": 4.0,
+      "paymentFlat": 0.30,
+      "offsiteAdsPct": 15.0
+    },
+    "CA": {
+      "label": "Canada",
+      "currency": "CAD",
+      "currencySymbol": "C$",
+      "listingFee": 0.27,
+      "transactionPct": 6.5,
+      "paymentPct": 3.0,
+      "paymentFlat": 0.25,
+      "offsiteAdsPct": 15.0
+    },
+    "AU": {
+      "label": "Australia",
+      "currency": "AUD",
+      "currencySymbol": "A$",
+      "listingFee": 0.31,
+      "transactionPct": 6.5,
+      "paymentPct": 3.0,
+      "paymentFlat": 0.25,
+      "offsiteAdsPct": 15.0
+    }
+  }
+}
