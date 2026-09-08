@@ -110,7 +110,10 @@
   <div class="wrap">
     <div class="nav">
       <div class="brand"><span class="logo">◎</span><span class="brandname">SellerLens</span></div>
-      <a class="btn ghost" href="#get">Add to Chrome</a>
+      <div style="display:flex;gap:16px;align-items:center">
+        <a href="#pricing" style="color:var(--muted);text-decoration:none;font-size:15px">Pricing</a>
+        <a class="btn ghost" href="#get">Add to Chrome</a>
+      </div>
     </div>
     <div class="kick" style="margin-top:26px">Read-only seller intelligence for Etsy</div>
     <h1>See your true Etsy profit,<br/>right on the page.</h1>
@@ -200,15 +203,91 @@
   </div>
 </section>
 
+<style>
+  #pricing .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+  #pricing .plan{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:32px 26px;display:flex;flex-direction:column}
+  #pricing .plan.pop{border-color:var(--gold);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+  #pricing .tag{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--ink);font-weight:800;font-size:11px;letter-spacing:1px;text-transform:uppercase;padding:5px 14px;border-radius:999px;white-space:nowrap}
+  #pricing .tag.alt{background:transparent;color:var(--gold2);border:1px solid var(--line)}
+  #pricing .plan .kick{margin-bottom:6px}
+  #pricing .price{font-family:Georgia,serif;font-size:44px;color:var(--text);margin:2px 0 2px}
+  #pricing .price span{font-family:inherit;font-size:15px;color:var(--muted);font-weight:400}
+  #pricing .save{color:var(--pos);font-weight:700;font-size:14px;margin-top:4px}
+  #pricing ul{list-style:none;margin:18px 0 24px;color:#cdd9f5;font-size:15px}
+  #pricing li{display:flex;gap:10px;margin:9px 0}
+  #pricing li b{color:var(--pos)}
+  #pricing .plan .btn{margin-top:auto;text-align:center}
+  #pricing .pricing-note{text-align:center;color:var(--muted);font-size:14px;margin:28px auto 0;max-width:760px}
+  @media(max-width:760px){#pricing .plans{grid-template-columns:1fr}}
+</style>
+
+<section class="block" id="pricing">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kick">Pricing</div>
+      <h2>Start free. Go Pro when you want it automatic.</h2>
+      <p>SellerLens is free forever. Pro adds automatic Etsy-fee updates, so your margin math stays correct whenever Etsy changes its fees — with zero manual editing.</p>
+    </div>
+    <div class="plans">
+
+      <div class="plan">
+        <div class="kick">Free</div>
+        <div class="price">$0<span> / forever</span></div>
+        <ul>
+          <li><b>✓</b> Real net-margin calculator (after every Etsy fee)</li>
+          <li><b>✓</b> 0–100 listing quality score + fixes</li>
+          <li><b>✓</b> Freshness hint &amp; shop snapshot → CSV</li>
+          <li><b>✓</b> Read-only, private, no sign-up</li>
+        </ul>
+        <a class="btn ghost" href="#get" data-cta="add-to-chrome">Add to Chrome</a>
+      </div>
+
+      <div class="plan pop">
+        <div class="tag">Most popular</div>
+        <div class="kick">Pro · Monthly</div>
+        <div class="price">$2.99<span> / month</span></div>
+        <ul>
+          <li><b>✓</b> Everything in Free</li>
+          <li><b>✓</b> Automatic Etsy-fee updates</li>
+          <li><b>✓</b> Always-accurate margins, no manual editing</li>
+          <li><b>✓</b> Use on up to 3 of your own browsers</li>
+        </ul>
+        <!-- TODO: when Pro launches, point this to the Lemon Squeezy checkout: https://sellerlens.lemonsqueezy.com/checkout/buy/131ab69f-efc7-4259-9829-8816c1dfb6c1 -->
+        <a class="btn" href="mailto:fruruk@gmail.com?subject=SellerLens%20Pro%20waitlist&amp;body=Please%20let%20me%20know%20when%20SellerLens%20Pro%20launches." data-cta="pro-waitlist">Coming soon — notify me</a>
+      </div>
+
+      <div class="plan">
+        <div class="tag alt">Best value</div>
+        <div class="kick">Pro · 6 months</div>
+        <div class="price">$9<span> / 6 months</span></div>
+        <div class="save">Just $1.50/mo — save ~50%</div>
+        <ul>
+          <li><b>✓</b> Everything in Pro Monthly</li>
+          <li><b>✓</b> One payment every 6 months</li>
+          <li><b>✓</b> Best price per month</li>
+        </ul>
+        <!-- TODO: when Pro launches, point this to the same Lemon Squeezy checkout (buyer picks the 6-month plan there): https://sellerlens.lemonsqueezy.com/checkout/buy/131ab69f-efc7-4259-9829-8816c1dfb6c1 -->
+        <a class="btn ghost" href="mailto:fruruk@gmail.com?subject=SellerLens%20Pro%20waitlist&amp;body=Please%20let%20me%20know%20when%20SellerLens%20Pro%20launches." data-cta="pro-waitlist">Coming soon — notify me</a>
+      </div>
+
+    </div>
+    <p class="pricing-note">Secure checkout handled by Lemon Squeezy (our Merchant of Record). Cancel anytime. Prices in USD. SellerLens is an independent tool, not affiliated with Etsy.</p>
+  </div>
+</section>
+
 <section class="block">
   <div class="wrap" style="max-width:820px">
     <div class="section-head">
       <div class="kick">Good to know</div>
       <h2>FAQ</h2>
     </div>
-    <div class="qa"><h4>Is it really free?</h4><p>Yes. The current version is completely free with no sign-up. A paid Pro tier with extra features is planned later.</p></div>
+    <div class="qa"><h4>Is it really free?</h4><p>Yes — the core tools are free forever, with no sign-up. There's an optional <b>Pro</b> plan ($2.99/month or $9 every 6 months) that adds automatic Etsy-fee updates, but you never need it to use SellerLens.</p></div>
+    <div class="qa"><h4>What's the difference between Free and Pro?</h4><p>Free gives you the full net-margin calculator, quality score, freshness hint and shop snapshot. Pro adds one thing: <b>automatic Etsy-fee updates</b>, so when Etsy changes its fees your margin math stays accurate without you editing anything by hand.</p></div>
+    <div class="qa"><h4>Do I have to pay?</h4><p>No. The free version is complete on its own. Pro is only worth it if you'd rather not keep the fee table up to date yourself.</p></div>
+    <div class="qa"><h4>Can I cancel Pro anytime?</h4><p>Yes. Pro is a subscription you can cancel whenever you like — you keep the free version regardless.</p></div>
+    <div class="qa"><h4>How does payment work, and is it secure?</h4><p>Checkout is handled by <b>Lemon Squeezy</b>, our Merchant of Record — the same trusted checkout many software makers use. You can pay by card or PayPal. SellerLens never sees or stores your card details.</p></div>
     <div class="qa"><h4>Is it safe for my Etsy shop?</h4><p>Completely. SellerLens is read-only — it only reads the page you're viewing and never clicks, edits, relists, or automates anything, so it can't trigger account issues.</p></div>
-    <div class="qa"><h4>Do you collect my data?</h4><p>No. There is no server, no account, and no tracking. Everything runs locally in your browser and your data never leaves your device.</p></div>
+    <div class="qa"><h4>Do you collect my data?</h4><p>No. There's no account and no tracking, and your shop or browsing data is never collected or sold. The free version runs entirely in your browser. Pro makes just two minimal requests — to download the public Etsy fee table and to check your license — and nothing about what you browse is ever sent.</p></div>
     <div class="qa"><h4>Which marketplaces are supported?</h4><p>Etsy today. The design makes it straightforward to add other marketplaces later.</p></div>
   </div>
 </section>
